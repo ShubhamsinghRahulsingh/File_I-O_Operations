@@ -21,11 +21,17 @@ namespace File_IO_Operations.FileOperations
         }//UC2
         public void ReadAllLines()
         {
-            string[] lines=File.ReadAllLines(filePath);
+            string[] lines=File.ReadAllLines(filePath);//read line by line
             foreach(string line in lines)
             {
                 Console.WriteLine(line);
             }
+        }
+        //UC3
+        public void ReadAllText()
+        {
+            string lines = File.ReadAllText(filePath);//read all text as a single string
+            Console.WriteLine(lines);
         }
     }
 }
