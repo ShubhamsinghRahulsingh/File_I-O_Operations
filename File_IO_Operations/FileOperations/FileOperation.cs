@@ -40,5 +40,12 @@ namespace File_IO_Operations.FileOperations
             File.Copy(filePath, CopyPath);
             Console.WriteLine("File is Copied");
         }
+        //UC5
+        public void DeleteFile()
+        {
+            string DeleteFile = @"D:\GitRepository\File_IO_Operations\File_IO_Operations\File\operationNew.txt";
+            File.Delete(DeleteFile);
+            Console.WriteLine("File is Deleted");
+        }
     }
 }
