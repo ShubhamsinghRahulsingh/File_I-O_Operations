@@ -47,5 +47,17 @@ namespace File_IO_Operations.FileOperations
             File.Delete(DeleteFile);
             Console.WriteLine("File is Deleted");
         }
+        //UC6
+        public void ReadFromStreamReader()
+        {
+            using (StreamReader sr = File.OpenText(filePath))//streamreader is a class to read file where opentext is method in it
+            {
+                string s = "";
+                while ((s = sr.ReadLine()) != null)
+                {
+                    Console.WriteLine(s);
+                }
+            }
+        }
     }
 }
