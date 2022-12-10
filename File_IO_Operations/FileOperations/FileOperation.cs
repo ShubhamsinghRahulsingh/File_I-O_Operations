@@ -18,7 +18,14 @@ namespace File_IO_Operations.FileOperations
             }
             else
                 Console.WriteLine("File Does not Exists");
+        }//UC2
+        public void ReadAllLines()
+        {
+            string[] lines=File.ReadAllLines(filePath);
+            foreach(string line in lines)
+            {
+                Console.WriteLine(line);
+            }
         }
-
     }
 }
