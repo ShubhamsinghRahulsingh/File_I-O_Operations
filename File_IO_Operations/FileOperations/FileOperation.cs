@@ -59,5 +59,15 @@ namespace File_IO_Operations.FileOperations
                 }
             }
         }
+        //UC7
+        public void WriteFromStreamWriter()
+        {
+            using (StreamWriter sr = File.AppendText(filePath))
+            {
+                sr.WriteLine(" Hello World - .Net is Awesome");
+                sr.Close();
+                Console.WriteLine(File.ReadAllText(filePath));
+            }
+        }
     }
 }
