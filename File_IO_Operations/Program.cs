@@ -1,4 +1,5 @@
 ﻿using File_IO_Operations.FileOperations;
+using File_IO_Operations.SerializationAndDeserialization;
 using System;
 namespace File_IO_Operations
 {
@@ -7,12 +8,13 @@ namespace File_IO_Operations
         public static void Main(string[] args)
         {
             FileOperation file = new FileOperation();
+            Binary binary = new Binary();
             Console.WriteLine("Welcome to Perform Operations on File");
             bool flag=true;
             while(flag)
             {
                 Console.WriteLine("-----------------------------------------------------");
-                Console.WriteLine("Select From the Following\n1.FileExistsOrNot\n2.ReadAllLines\n3.ReadAllText\n4.CopyFile\n5.DeleteFile\n6.ReadFromStreamReader\n7.WriteFromStreamWriter\n8.Exit");
+                Console.WriteLine("Select From the Following\n1.FileExistsOrNot\n2.ReadAllLines\n3.ReadAllText\n4.CopyFile\n5.DeleteFile\n6.ReadFromStreamReader\n7.WriteFromStreamWriter\n8.BinarySerialization\n9.BinaryDeserialization\n10.Exit");
                 int choice=Convert.ToInt32(Console.ReadLine());
                 switch(choice)
                 {
@@ -38,6 +40,12 @@ namespace File_IO_Operations
                         file.WriteFromStreamWriter();
                         break;
                     case 8:
+                        binary.Binaryserialization();
+                        break;
+                    case 9:
+                        binary.BinaryDeserialization();
+                        break;
+                    case 10:
                         flag = false;
                         break;
                 }
