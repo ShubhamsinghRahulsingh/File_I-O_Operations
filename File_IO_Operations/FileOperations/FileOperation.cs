@@ -33,5 +33,12 @@ namespace File_IO_Operations.FileOperations
             string lines = File.ReadAllText(filePath);//read all text as a single string
             Console.WriteLine(lines);
         }
+        //UC4
+        public void CopyFile()
+        {
+            string CopyPath = @"D:\GitRepository\File_IO_Operations\File_IO_Operations\File\operationNew.txt";
+            File.Copy(filePath, CopyPath);
+            Console.WriteLine("File is Copied");
+        }
     }
 }

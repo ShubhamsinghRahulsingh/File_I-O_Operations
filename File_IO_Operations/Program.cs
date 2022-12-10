@@ -12,7 +12,7 @@ namespace File_IO_Operations
             while(flag)
             {
                 Console.WriteLine("-----------------------------------------------------");
-                Console.WriteLine("Select From the Following\n1.FileExistsOrNot\n2.ReadAllLines\n3.ReadAllText\n4.Exit");
+                Console.WriteLine("Select From the Following\n1.FileExistsOrNot\n2.ReadAllLines\n3.ReadAllText\n4.CopyFile\n5.Exit");
                 int choice=Convert.ToInt32(Console.ReadLine());
                 switch(choice)
                 {
@@ -26,6 +26,9 @@ namespace File_IO_Operations
                         file.ReadAllText();
                         break;
                     case 4:
+                        file.CopyFile();
+                        break;
+                    case 5:
                         flag = false;
                         break;
                 }
